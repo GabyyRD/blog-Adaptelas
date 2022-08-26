@@ -35,10 +35,6 @@
                 Descrição
                 <input name="description" type="text"/>
             </label>
-            <label for="author">
-                Autor
-                <input name="author" type="text"/>
-            </label>
             <label for="text">
                 Texto
                 <input name="text" type="text"/>
@@ -57,7 +53,10 @@
                     <h4 style="text-align: center; margin: 0">{{ $post->description }}</h4>
                     <span style="text-align: center; margin: 0 0 5px 0; font-size: 6px">{{ $post->created_at }}</span>
                     <p style="text-align: center; margin: 5px 0 5px 0; font-size: 12px">{{ $post->text }}</p>
-                    <span style="text-align: center; margin: 0 0 5px 0; font-size: 8px">By: {{ $post->author }}</span>
+                    <div>
+                        <span style="text-align: center; margin: 0 0 5px 0; font-size: 8px">By: {{ $post->user->name }}</span>
+                        <img style="border-radius: 50%" width="30px" height="30px" src="/storage/{{ $post->user->photo }}" alt="foto perfil">
+                    </div>
                     <form id="delete-{{$post->id}}" action="{{ route('blog.delete', $post->id) }}" method="POST">
 
                         @csrf

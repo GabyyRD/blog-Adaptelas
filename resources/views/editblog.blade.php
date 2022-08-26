@@ -10,7 +10,7 @@
 
     <h1 style="text-align: center">MEU BLOG</h1>
 
-    <h2>Novo Post:</h2>
+    <h2>Editar Post:</h2>
     @isset($post)
     <div style="display: flex; flex-direction: column">
         <form id="meu-form" action="{{ route('blog.update', $post->id) }}" method="POST" style="display: flex; flex-direction: column"

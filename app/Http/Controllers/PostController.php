@@ -18,7 +18,7 @@ class PostController extends Controller
      */
     public function index(): View
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->get()->map(fn(Post $post) => $post->load('user'));
         return view('blog', compact('posts'));
     }
 
@@ -38,11 +38,11 @@ class PostController extends Controller
      * @param  \App\Http\Requests\StorePostRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorePostRequest $request): View
+    public function store(StorePostRequest $request): string
     {
         $data = $request->validated();
+        $data['user_id'] = auth()->id();
         Post::create($data);
-
         return redirect()->route('blog.index');
     }
 

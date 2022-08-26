@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/', function () {
+    return redirect()->route('blog.index');
+});
 
 Route::group([
     'middleware' => 'auth',
@@ -24,8 +27,12 @@ Route::group([
     Route::post('/post', [\App\Http\Controllers\PostController::class, 'store'])->name('blog.store');
     Route::delete('/post/{id}', [\App\Http\Controllers\PostController::class, 'destroy'])->name('blog.delete');
     Route::get('/post/{id}', [\App\Http\Controllers\PostController::class, 'edit'])->name('blog.edit');
-    Route::put('/post/{id}', [PostController::class, 'update'])->name('blog.update');
+    Route::put('/post/{id}', [\App\Http\Controllers\PostController::class, 'update'])->name('blog.update');
+
+    Route::get('/profile', [\App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
 });
+
 
 
 
