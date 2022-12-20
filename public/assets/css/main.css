@@ -1,0 +1,416 @@
+
+:root{
+    --navbar-background: #8D18B6;
+    --navbar-link: #fff;
+    --footer-text: #094066;
+    --footer-coracao: #ff0000;
+    --footer-background:#D37BF2;
+    --footer-color-title: #313232;
+    --footer-color-text-contact: #373737;
+    --background: #FFF7FC;
+    --color-author:#D9C3F0;
+    --border-pesquisa:#8a8a8a
+
+  }
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-color: var(--background);
+  }
+  /* Navbar  */
+  .navbar{
+    background: var(--navbar-background);
+    /* width: 100vw;  */
+    height: 95px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .logo{
+    width:50%;
+    margin-left: 20px;
+  }
+  .links{
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 50px;
+  }
+  .links li {
+    list-style:none;
+  }
+  .link{
+    text-decoration: none;
+    color: var(--navbar-link);
+    font-size: 25px;
+  }
+
+  /* footer */
+  /* .footer{
+    position: absolute;
+    bottom: 0;
+  } */
+  .footer-adapti{
+    /* width: 100vw; */
+    height:82px;
+
+  }
+  .footer-adapti, .container-icons{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+  }
+  .container-icons{
+    justify-content:center;
+    gap: 50px;
+  }
+  .container-icons  i{
+    font-size: 20px;
+    color: var(--footer-text);
+  }
+  .text-footer{
+    color:var(--footer-text);
+    font-size: 22px;
+  }
+
+  .text-footer > span{
+    color: var(--footer-coracao);
+  }
+
+  .footer-aboutus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer-background);
+    /* width: 100vw; */
+    height: 330px;
+  }
+  .footer-aboutus-text, .footer-aboutus-image,.footer-aboutus-contact{
+    width: 33.33%;
+  }
+  .footer-aboutus-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-aboutus-text h4{
+    margin-bottom: 20px;
+    font: normal 600 25px/34px 'Poppins', sans-serif; /*shorthand*/
+    text-align: center;
+    color: var(--footer-color-title);
+  }
+  .footer-aboutus-text p{
+    font: normal 400 16px/21.5px 'Poppins', sans-serif; /*shorthand*/
+    text-align: center;
+    max-width: 330px;
+    color: var(--footer-color-title);
+  }
+  .footer-aboutus-image{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    max-width: 400px;
+  }
+  .footer-aboutus-image > img{
+    width: 100%;
+  }
+  .footer-aboutus-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .phone, .email, .instagram, .site{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .phone-text, .email-text, .instagram-text, .site-text{
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .phone-text > span, .email-text > span, .instagram-text > span, .site-text > span{
+    font: normal 400 20px/23px 'Poppins', sans-serif;
+    color: var(--footer-color-text-contact);
+  }
+  .background-icons > i{
+    font-size: 25px;
+    color: var(--navbar-background);
+  }
+  .phone-img,.email-img, .instagram-img, .site-img{
+    width: 30%;
+  }
+  .background-icons{
+    background: var(--navbar-link);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Pagina de postagens */
+  .blog{
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--background);
+    margin-bottom: 50px;
+  }
+
+  .blog > h1{
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--navbar-background);
+    font-family: 'Poppins';
+    margin: 50px 0 ;
+  }
+
+  .content{
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    padding: 0 50px;
+  }
+  .posts{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .post{
+    max-width: 750px;
+    width: 100%;
+    height: 635px;
+    background: var(--navbar-link);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .container-imagem{
+    width: 100%;
+    height: 55%;
+  }
+  .post-imagem{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container-info{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .container-info > h3{
+    font-family: 'Poppins';
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--navbar-background);
+  }
+
+  .info-post{
+    color: var(--color-author) ;
+    font-size: 12px;
+    display: flex;
+    gap: 10px;
+  }
+  .info-post span{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+  }
+  .description-post{
+    height: 80px
+  }
+  .container-ver-mais{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .container-ver-mais > a {
+    text-decoration: none;
+    color: var(--navbar-background);
+    font-weight: 600;
+    transition: .2s ease-in;
+  }
+  .container-ver-mais > a:hover {
+    color: var(--footer-color-text-contact);
+  }
+
+  .aside{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 35px 20px;
+    background: var(--navbar-link);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    height: 100%;
+  }
+  .aside h2{
+    color: var(--navbar-background);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .container-sobremin, .container-pesquisa{
+    width: 100%;
+  }
+
+  .container-info-sobremin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  .background-imagem{
+    background-color: var(--navbar-background);
+    border-radius: 50% 50% 50% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 110px;
+  }
+  .container-imagem-sobremin{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .container-imagem-sobremin > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .container-texto{
+    width: 320px;
+    font-size: 14px;
+  }
+
+  .container-input-pesquisa{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-input-pesquisa>input{
+    width: 85%;
+    border: 1px solid var(--border-pesquisa);
+    color: var(--border-pesquisa);
+    height: 100%;
+    padding-left: 10px;
+  }
+  .container-input-pesquisa>a{
+    width: 15%;
+    height: 100%;
+    background-color: var(--navbar-background);
+    color: var(--navbar-link);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    transition: 0.5s ease-in;
+  }
+  .container-input-pesquisa>a:hover{
+    background-color:var(--navbar-link) ;
+    color:  var(--navbar-background);
+    border: 1px solid var(--navbar-background);
+  }
+  .container-input-pesquisa>input:focus{
+    background-color:var(--navbar-link) ;
+    color:  var(--navbar-background);
+    border: 2px solid var(--navbar-background);
+    outline: none;
+  }
+  .container-categorias .categorias{
+    padding: 0 20px;
+  }
+
+  .container-categorias ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .container-categorias li{
+    list-style: disc;
+  }
+  .container-categorias li a{
+    text-decoration: none;
+    /* color: var(--footer-color-title); */
+    color: #000;
+  }
+  .posts-recentes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    /* padding: 0 30px; */
+  }
+  .posts-recentes a {
+    text-decoration: none;
+    color: #000;
+    transition:  0.5s ease-in;
+  }
+  .posts-recentes a:hover {
+    border: 2px solid var(--navbar-background);
+  }
+  .post-recente{
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    gap: 20px;
+  }
+  .post-recente-imagem{
+    width: 150px;
+    height: 100%;
+  }
+  .post-recente-imagem  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .info-post-recente{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .descricao-post-recente{
+    font-size: 15px;
+  }
+
+  /* Postagem */
+
+  .postagem{
+    height: 100%;
+  }
